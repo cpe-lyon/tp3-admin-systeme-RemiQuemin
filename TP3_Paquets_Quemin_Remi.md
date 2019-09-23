@@ -57,6 +57,8 @@ fi
 ### Exercice 4.
 #### Lister les programmes livrés avec coreutils. A quoi sert la commande ’[’ et comment afficher ce qu’elle retourne ?
 
+`apt show coreutils`
+
 Exercice 5. aptitude
 Installez le paquet emacs à l’aide de la version graphique d’aptitude.
 
