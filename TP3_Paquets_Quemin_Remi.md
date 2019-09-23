@@ -59,7 +59,8 @@ fi
 
 `apt show coreutils`
 
-Exercice 5. aptitude
+#### Exercice 5. aptitude
+
 Installez le paquet emacs à l’aide de la version graphique d’aptitude.
 
 Exercice 6. Installation d’un paquet par PPA
