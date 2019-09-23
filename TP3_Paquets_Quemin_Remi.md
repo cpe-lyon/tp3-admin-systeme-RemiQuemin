@@ -43,8 +43,8 @@ Avec `cat /var/log/dpkg.log` je remarque que le paquet fortunes a été install�
 
 ### Exercice 3.
 #### Ecrire une commande qui affiche “INSTALLÉ” ou “NON INSTALLÉ” selon le nom et le statut du package spécifié dans cette commande.
-le script bash est le suivant, quand je lance le script il suffit d'écrire la commande
 
+```
 !/bin/bash
 if [ -z "$1" ]; then
         echo "Non installé."
@@ -52,6 +52,8 @@ else
         dpkg -S $(which "$1");
         echo "Installé";
 fi
+```
+
 ### Exercice 4.
 #### Lister les programmes livrés avec coreutils. A quoi sert la commande ’[’ et comment afficher ce qu’elle retourne ?
 
