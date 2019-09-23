@@ -1,4 +1,4 @@
-## Exercice 1. Commandes de base
+### Exercice 1. Commandes de base
 
 
 #### Commencez par mettre à jour votre système avec les commandes vues dans le cours. Donnez les commandes répondant aux questions suivantes :
@@ -33,19 +33,28 @@ texlive-games - TeX Live : Composition de jeux
 nudoku - ncurses based sudoku games
 ```
 
-7. Lister les derniers paquets installés explicitement avec la commande apt install
-Exercice 2.
-A partir de quel paquet est installée la commande ls ? Comment obtenir cette information en une seule
-commande, pour n’importe quel programme (indice : la réponse est dans le poly de cours 2, dans la liste des
-commandes utiles) ? Utilisez la réponse à pour écrire un script appelé origine-commande (sans l’extension
-.sh) prenant en argument le nom d’une commande, et indiquant quel paquet l’a installée.
-`which ls | xargs dpkg -s`apt 
-Exercice 3.
-Ecrire une commande qui affiche “INSTALLÉ” ou “NON INSTALLÉ” selon le nom et le statut du package
-spécifié dans cette commande.
-Exercice 4.
-Lister les programmes livrés avec coreutils. A quoi sert la commande ’[’ et comment afficher ce qu’elle
-retourne ?
+#### 7. Lister les derniers paquets installés explicitement avec la commande apt install
+
+Avec `cat /var/log/dpkg.log` je remarque que le paquet fortunes a été installé recemment.
+
+### Exercice 2.
+#### A partir de quel paquet est installée la commande ls ? Comment obtenir cette information en une seule commande, pour n’importe quel programme (indice : la réponse est dans le poly de cours 2, dans la liste des commandes utiles) ? Utilisez la réponse à pour écrire un script appelé origine-commande (sans l’extension.sh) prenant en argument le nom d’une commande, et indiquant quel paquet l’a installée.
+`which ls | xargs dpkg -s`
+
+### Exercice 3.
+#### Ecrire une commande qui affiche “INSTALLÉ” ou “NON INSTALLÉ” selon le nom et le statut du package spécifié dans cette commande.
+le script bash est le suivant, quand je lance le script il suffit d'écrire la commande
+
+!/bin/bash
+if [ -z "$1" ]; then
+        echo "Non installé."
+else
+        dpkg -S $(which "$1");
+        echo "Installé";
+fi
+### Exercice 4.
+#### Lister les programmes livrés avec coreutils. A quoi sert la commande ’[’ et comment afficher ce qu’elle retourne ?
+
 Exercice 5. aptitude
 Installez le paquet emacs à l’aide de la version graphique d’aptitude.
 
@@ -56,7 +65,7 @@ personnel” ou PPA.
 1. Installer la version Oracle de Java (avec l’ajout des PPA)
 sudo add-apt-repository ppa:linuxuprising/java
 sudo apt update
-sudo apt install oracle-java11-installer
+sudo apt install oracle-java12-installer
 2. Vérifiez qu’un nouveau fichier a été créé dans /etc/apt/sources.list.d. Que contient-il ?
 Exercice 7. Création de dépôt personnalisé
 Dans cet exercice, vous allez créer vos propres paquets et dépôts, ce qui vous permettra de gérer les
