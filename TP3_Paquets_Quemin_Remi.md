@@ -1,11 +1,15 @@
-#### Exercice 1. Commandes de base
-Commencez par mettre à jour votre système avec les commandes vues dans le cours.
-Donnez les commandes répondant aux questions suivantes :
-1. Quels sont les 5 derniers paquets installés sur votre machine ?
+### Exercice 1. Commandes de base
+#### Commencez par mettre à jour votre système avec les commandes vues dans le cours. Donnez les commandes répondant aux questions suivantes :
+#### 1. Quels sont les 5 derniers paquets installés sur votre machine ?
+Les 5 derniers paquets sont : `grep "installed"  /var/log/dpkg.log | tail -5`
 2. Utiliser dpkg et apt pour compter le nombre de paquets installés (ne pas hésiter à consulter le manuel !).
+en apt : `apt list -- installed | wc -l` : 515
+en dpkg : `dpkg -l | grep "ii" | wc -l` : 514
 Comment explique-t-on la (petite) différence de comptage ?
-3. Combien de paquets sont disponibles en téléchargement ?
-4. Créer un alias “maj” qui met à jour le système
+#### 3. Combien de paquets sont disponibles en téléchargement ?
+`apt list | wc -l`
+#### 4. Créer un alias “maj” qui met à jour le système
+
 5. A quoi sert le paquet fortunes ? Installez-le.
 6. Quels paquets proposent de jouer au sudoku ?
 7. Lister les derniers paquets installés explicitement avec la commande apt install
