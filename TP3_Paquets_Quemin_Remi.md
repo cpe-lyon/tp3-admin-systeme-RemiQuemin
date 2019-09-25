@@ -72,13 +72,12 @@ Ensuite j'ai recherché dans aptitude le paquet emacs avec le / puis j'ai tapé 
 
 ### Exercice 6
 #### Installation d’un paquet par PPA
-Certains logiciels ne figurent pas dans les dépôts officiels. C’est le cas par exemple de la version ”officielle”
-de Java depuis qu’elle est développée par Oracle. Dans ces cas, on peut parfois se tourner vers un ”dépôt
-personnel” ou PPA.
-1. Installer la version Oracle de Java (avec l’ajout des PPA)
-sudo add-apt-repository ppa:linuxuprising/java
-sudo apt update
-sudo apt install oracle-java12-installer
-2. Vérifiez qu’un nouveau fichier a été créé dans /etc/apt/sources.list.d. Que contient-il ?
-Exercice 7. Création de dépôt personnalisé
+#### Certains logiciels ne figurent pas dans les dépôts officiels. C’est le cas par exemple de la version ”officielle” de Java depuis qu’elle est développée par Oracle. Dans ces cas, on peut parfois se tourner vers un ”dépôt personnel” ou PPA. 1. Installer la version Oracle de Java (avec l’ajout des PPA) sudo add-apt-repository ppa:linuxuprising/java sudo apt update sudo apt install oracle-java12-installer 2.
+
+Pour installer la version Oracle de Java : 
+`sudo add-apt-repository ppa:linuxuprising/java`
+`sudo apt update`
+`sudo apt install oracle-java12-installer`
+#### Vérifiez qu’un nouveau fichier a été créé dans /etc/apt/sources.list.d. Que contient-il ?
+J'y vais avec la commande `cd /etc/apt/source.list.d` puis `ls` : linuxuprising-ubuntu-java-disco.list
 
