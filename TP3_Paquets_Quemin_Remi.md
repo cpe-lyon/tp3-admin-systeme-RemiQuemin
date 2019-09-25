@@ -68,12 +68,14 @@ La commande permettant de lister les programmes est :`apt show coreutils`
 #### Installez le paquet emacs à l’aide de la version graphique d’aptitude.
 
 Tout d'abord j'installe aptitude avec la commande: `apt install aptitude`. <br>
-Ensuite j'ai recherché dans aptitude le paquet emacs avec le __/__ puis j'ai tapé `emacs`. Pour trouver le paquet j'ai appuyé 2 fois sur __N__ pour changer de page et apres etre tombé dessus j'ai installé le paquet : Tout d'abord avec + pour selectionner tous les paquets correspondants et enfin deux fois sur __G__.
+Ensuite j'ai recherché dans aptitude le paquet emacs avec le __"/"__ puis j'ai tapé `emacs`. Pour trouver le paquet j'ai appuyé 2 fois sur __"n"__ ce qui permet de changer de page. <br>
+Apres etre tombé dessus j'ai installé le paquet : <br>
+Tout d'abord avec __"+"__ pour selectionner tous les paquets correspondants et enfin deux fois sur __"g"__ pour l'installer.
 
 ### Exercice 6
 #### Installation d’un paquet par PPA
 #### Certains logiciels ne figurent pas dans les dépôts officiels. C’est le cas par exemple de la version ”officielle” de Java depuis qu’elle est développée par Oracle. Dans ces cas, on peut parfois se tourner vers un ”dépôt personnel” ou PPA. 1. Installer la version Oracle de Java (avec l’ajout des PPA) sudo add-apt-repository ppa:linuxuprising/java sudo apt update sudo apt install oracle-java12-installer 2.
-Pour installer la version Oracle de Java : 
+Pour installer la version Oracle de Java : <br> 
 `sudo add-apt-repository ppa:linuxuprising/java`. <br>
 `sudo apt update`. <br>
 `sudo apt install oracle-java12-installer`. <br>
