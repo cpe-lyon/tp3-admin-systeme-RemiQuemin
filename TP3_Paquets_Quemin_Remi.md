@@ -8,7 +8,7 @@
 La commande qui permet de lister les 5 derniers paquets est : `grep "installed"  /var/log/dpkg.log | tail -5`
 
 #### 2. Utiliser dpkg et apt pour compter le nombre de paquets installés (ne pas hésiter à consulter le manuel !).
-en apt : `apt list -- installed | wc -l` : 515
+en apt : `apt list -- installed | wc -l` : 515 /n
 en dpkg : `dpkg -l | grep "ii" | wc -l` : 514
 
 #### 3. Combien de paquets sont disponibles en téléchargement ?
